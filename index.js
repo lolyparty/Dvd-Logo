@@ -68,7 +68,6 @@ const moveReverse = () => {
 const movement = ()=>{
     position()
     move()
-    position();
     moveReverse()
     
     // console.log(xPos, yPos);
