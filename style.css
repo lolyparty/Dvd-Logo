@@ -5,12 +5,12 @@ body{
     height: 100vh;
     width:100vw;
     overflow: hidden;
-    background:#000;
+    background:rgb(54, 54, 54);
   }
   
   #container{
-    Height:100px;
-    Width:100px;
+    Height:150px;
+    Width:150px;
     /* Background:#be0e0e; */
     Position:absolute;
     /* left:100px;

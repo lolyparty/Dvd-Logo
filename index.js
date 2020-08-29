@@ -10,14 +10,14 @@ let startingH = Math.random() * vpH;
 let startingW = Math.random() * vpW;
 let xPos = startingW;
 let yPos = startingH
-xSpeed = 3;
-ySpeed = 3;
+xSpeed = 2.5;
+ySpeed = 2.5;
 
 
 // box.style.left = startingW + 'px';
 // box.style.top = startingH + 'px';
 
-console.log(vpW, vpH)
+// console.log(vpW, vpH)
 
 var position = function(){
     box.style.left = xPos + 'px'
@@ -31,24 +31,42 @@ const move = () => {
     yPos += ySpeed
 }
 
+const color = () => {
+   return Math.floor((Math.random() * 250))
+}
+
+const colorChange = () => {
+     
+    const paths = document.querySelectorAll('path' + ',' + 'polygon');
+    // console.log(color())
+    paths.forEach((cur)=>{
+        cur.style.fill = `rgb(${color()},${color()},${color()})`;
+    })
+}
+
 const moveReverse = () => {
-    if(xPos + 100 >= vpW){
+    if(xPos + 150 >= vpW){
         xSpeed = -xSpeed;
+        colorChange();
     } else if(xPos <= 0){
         xSpeed = -xSpeed
-        console.log(xPos)
+        // console.log(xPos)
+        colorChange()
     }
     
-    if(yPos + 50 >= vpH){
+    if(yPos + 70 >= vpH){
         ySpeed = -ySpeed;
+        colorChange()
     } else if(yPos <= 0){
         ySpeed = -ySpeed
-        console.log(yPos)
+        // console.log(yPos)
+        colorChange()
     }
 }
 
 
 const movement = ()=>{
+    position()
     move()
     position();
     moveReverse()
