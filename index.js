@@ -10,8 +10,8 @@ let startingH = Math.random() * vpH;
 let startingW = Math.random() * vpW;
 let xPos = startingW;
 let yPos = startingH
-xSpeed = 5;
-ySpeed = 5;
+xSpeed = 3;
+ySpeed = 3;
 
 
 // box.style.left = startingW + 'px';
@@ -32,16 +32,18 @@ const move = () => {
 }
 
 const moveReverse = () => {
-    if( (xPos + 50) >= vpW){
+    if(xPos + 100 >= vpW){
         xSpeed = -xSpeed;
     } else if(xPos <= 0){
         xSpeed = -xSpeed
+        console.log(xPos)
     }
     
     if(yPos + 50 >= vpH){
         ySpeed = -ySpeed;
     } else if(yPos <= 0){
         ySpeed = -ySpeed
+        console.log(yPos)
     }
 }
 
