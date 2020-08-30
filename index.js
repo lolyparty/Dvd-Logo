@@ -5,8 +5,17 @@ let vpW = window.innerWidth;
 let box = document.getElementById('container');
 // console.log(box)
 
-let xPos = vpW/2;
-let yPos = vpH/2;
+
+let startingH = (Math.random() * vpH) - 75;
+let startingW = (Math.random() * vpW) - 150;
+if(startingW < 0){
+    startingW = 0;
+}
+if(startingH < 0){
+    startingH = 0
+}
+let xPos = startingW;
+let yPos = startingH
 xSpeed = 3;
 ySpeed = 3;
 
@@ -14,7 +23,7 @@ ySpeed = 3;
 // box.style.left = startingW + 'px';
 // box.style.top = startingH + 'px';
 
-// console.log(vpW, vpH)
+console.log(startingW, startingH)
 
 var position = function(){
     box.style.left = xPos + 'px'
