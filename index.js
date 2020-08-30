@@ -20,16 +20,11 @@ xSpeed = 3;
 ySpeed = 3;
 
 
-// box.style.left = startingW + 'px';
-// box.style.top = startingH + 'px';
-
 console.log(startingW, startingH)
 
 var position = function(){
     box.style.left = xPos + 'px'
     box.style.top = yPos + 'px'
-    // console.log(xPos, yPos);
-// console.log(xPos, yPos);
 }
 
 const move = () => {
@@ -78,8 +73,6 @@ const movement = ()=>{
     
     // console.log(xPos, yPos);
     requestAnimationFrame(movement);
-
-    // console.log(ID)
 }
 
 movement()
