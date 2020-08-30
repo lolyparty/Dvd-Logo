@@ -5,13 +5,10 @@ let vpW = window.innerWidth;
 let box = document.getElementById('container');
 // console.log(box)
 
-
-let startingH = Math.random() * vpH;
-let startingW = Math.random() * vpW;
-let xPos = startingW;
-let yPos = startingH
-xSpeed = 2.5;
-ySpeed = 2.5;
+let xPos = vpW/2;
+let yPos = vpH/2;
+xSpeed = 3;
+ySpeed = 3;
 
 
 // box.style.left = startingW + 'px';
